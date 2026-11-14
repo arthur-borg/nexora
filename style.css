@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #080d18;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10%;
+    background-color: #0d1525;
+}
+nav h2 {
+    color: #3478f6;
+    font-size: 26px;
+    letter-spacing: 3px;
+}
+.links {
+    display: flex;
+    gap: 35px;
+}
+.links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.links a:hover {
+    color: #3478f6;
+}
+header {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+    position: relative;
+}
+header h1 {
+    font-size: 65px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    line-height: 1.2;
+    color: #ffffff;
+    animation: aparecer 1s ease forwards;
+}
+header h1 span {
+    color: #3478f6;
+}
+header p {
+    font-size: 18px;
+    color: #aab5c8;
+    line-height: 1.7;
+    margin-top: 25px;
+    max-width: 600px;
+    animation: aparecer 1s ease 0.3s forwards;
+    opacity: 0;
+}
+header a {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 16px 35px;
+    background-color: #3478f6;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 7px;
+    transition: 0.3s;
+    animation: aparecer 1s ease 0.6s both;
+}
+header a:hover {
+    background-color: #1d5fd1;
+    transform: translateY(-4px);
+}
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        translate: 0 30px;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+#sobre {
+    padding: 100px 15%;
+    text-align: center;
+    animation: aparecer 1s ease both;
+}
+#sobre h2 {
+    font-size: 33px;
+    color: #3478f6;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+#sobre p {
+    font-size: 17px;
+    color: #aab5c8;
+    line-height: 1.8;
+    max-width: 750px;
+    margin: 0 auto;
+}
+#solucoes {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+#solucoes h2 {
+    font-size: 33px;
+    color: #3478F6;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+}
+.lista-solucoes {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+.solucao {
+    flex: 1;
+    min-width: 230px;
+    padding: 35px 25px;
+    background-color: #0d1525;
+    border: 1px solid #1b2b48;
+    border-radius: 12px;
+    transition: 0.3s;
+    animation: aparecer 0.8s ease both;
+}
+.solucao:hover {
+    transform: translateY(-10px);
+    border-color: #3478F6;
+    box-shadow: 0 10px 30px #3478f633;
+}
+.solucao h3 {
+    color: #3478F6;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+.solucao p {
+    color: #aab5c8;
+    font-size: 15px;
+    line-height: 1.7;
+}
+#contato {
+    padding: 100px 10%;
+    text-align: center;
+    background-color: #0d1525;
+}
+#contato h2 {
+    font-size: 35px;
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+#contato p {
+    color: #aab5c8;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+#contato a {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #3478F6;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+#contato a:hover {
+    background-color: #1d5fd1;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 20px #3478f655;
+}
+footer {
+    padding: 25px;
+    text-align: center;
+    background-color: #080D18;
+    border-top: 1px solid #1B2B48;
+}
+
+footer p {
+    color: #AAB5C8;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-family: Georgia, serif;
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .links {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    #sobre {
+        padding: 80px 8%;
+    }
+
+    #contato h2 {
+        font-size: 27px;
+    }
+}
+.solucao:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.solucao:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.solucao:nth-child(3) {
+    animation-delay: 0.6s;
+}
+header::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background-color: #3478F6;
+    filter: blur(150px);
+    opacity: 0.25;
+    border-radius: 50%;
+    z-index: -1;
+}
